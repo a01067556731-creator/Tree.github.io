@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 웹페이지 기본 설정: 한글 깨짐 방지 및 모바일 화면 맞춤 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깽수기 | 세종특별자치시 주무관</title>
+    <!-- 외부 스타일 파일 불러오기 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 깔끔한 구글 웹 폰트(Noto Sans KR) 불러오기 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 상단 내비게이션 메뉴 바 -->
+    <header>
+        <nav>
+            <div class="logo">깽수기.</div>
+            <ul class="nav-links">
+                <li><a href="#about">자기소개</a></li>
+                <li><a href="#experience">경력</a></li>
+                <li><a href="#interests">관심분야</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 첫 화면 (히어로 섹션): 가장 먼저 보이는 큰 화면 -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>세종특별자치시 주무관<br><strong>깽수기</strong> 입니다.</h1>
+            <p>신뢰를 바탕으로 책임감 있게 일합니다.</p>
+            <a href="#about" class="btn">알아보기</a>
+        </div>
+    </section>
+
+    <!-- 자기소개 영역 -->
+    <section id="about" class="about">
+        <h2>자기소개</h2>
+        <!-- 제목 밑 강조선 -->
+        <div class="divider"></div>
+        <p class="intro-text">
+            일어 공부하는 자,<br>
+            자격증까지 도전하고 싶고 일본 여행을 열심히 가고 싶은 사람입니다.
+        </p>
+    </section>
+
+    <!-- 경력 사항 영역 -->
+    <section id="experience" class="experience">
+        <h2>경력 타임라인</h2>
+        <div class="divider"></div>
+        <!-- 시간 순서대로 보여주는 타임라인 구조 -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>공무원 2년차</h3>
+                    <p>세종특별자치시 주무관으로 재직 중입니다. 다양한 실무 경험을 쌓으며 성장하고 있습니다.</p>
+                </div>
+            </div>
+            <!-- 빈 칸으로 남겨둔 미래의 경력 영역 -->
+            <div class="timeline-item">
+                <div class="timeline-dot empty"></div>
+                <div class="timeline-content">
+                    <h3>계속 성장 중</h3>
+                    <p>앞으로의 새로운 도전을 기대해 주세요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 관심 분야 영역 -->
+    <section id="interests" class="interests">
+        <h2>관심 분야</h2>
+        <div class="divider"></div>
+        <!-- 여러 카드를 격자 형태로 배치 -->
+        <div class="interest-grid">
+            <div class="interest-card">
+                <h3>🇯🇵 일어 공부</h3>
+                <p>단순한 취미를 넘어 자격증 취득과 실전 여행 회화까지 목표로 하고 있습니다.</p>
+            </div>
+            <div class="interest-card">
+                <h3>📈 재테크</h3>
+                <p>경제의 흐름을 읽고 안정적인 자산 관리에 관심이 많습니다.</p>
+            </div>
+            <div class="interest-card">
+                <h3>🏢 부동산</h3>
+                <p>부동산 시장의 동향을 파악하고 가치 있는 공간을 보는 안목을 기르고 있습니다.</p>
+            </div>
+            <div class="interest-card">
+                <h3>🪙 코인</h3>
+                <p>새로운 기술인 암호화폐와 생태계에 대해 공부하고 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 영역 -->
+    <section id="contact" class="contact">
+        <h2>연락처</h2>
+        <div class="divider"></div>
+        <p>문의 사항이나 소통을 원하신다면 언제든 연락해 주세요.</p>
+        <div class="contact-info">
+            <!-- 클릭 시 메일 프로그램이 열리도록 설정 -->
+            <a href="mailto:news21004@korea.kr" class="email-link">✉️ news21004@korea.kr</a>
+        </div>
+    </section>
+
+    <!-- 하단 문구 (푸터) -->
+    <footer>
+        <p>&copy; 2026 깽수기. All rights reserved.</p>
+    </footer>
+
+    <!-- 반딧불이가 움직이며 반짝이는 효과 자바스크립트 -->
+    <script>
+        function createFirefly() {
+            const firefly = document.createElement('div');
+            firefly.classList.add('firefly');
+            
+            // 화면 전체 중 무작위 위치 설정
+            firefly.style.left = Math.random() * 100 + 'vw';
+            firefly.style.top = Math.random() * 100 + 'vh';
+            // 반짝이는 시간 (3 ~ 6초)
+            firefly.style.animationDuration = Math.random() * 3 + 3 + 's'; 
+            
+            document.body.appendChild(firefly);
+            
+            // 빛나고 나서 지우기
+            setTimeout(() => { firefly.remove(); }, 6000);
+        }
+
+        // 일정 시간(0.8초)마다 계속 반딧불이 생성
+        setInterval(createFirefly, 800);
+    </script>
+</body>
+</html>
